@@ -4,14 +4,14 @@ import './Workspace.css';
 import Customer from './Customer/Customer';
 import CreateCustomer from './CreateCustomer/CreateCustomer';
 
-function Workspace( { initialLoad, creating, currentCustomer } ) {
+function Workspace( { initialLoad, creating, currentCustomer, createCustomer } ) {
 
   return (
     <div id="Workspace__container">
       {
         creating
         ?
-          <CreateCustomer />
+          <CreateCustomer createCustomer={createCustomer} />
         :
           initialLoad
           ?

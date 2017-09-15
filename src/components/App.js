@@ -18,6 +18,7 @@ class App extends Component {
 
     this.startNewCustomer = this.startNewCustomer.bind( this );
     this.createCustomer = this.createCustomer.bind( this );
+    this.selectCustomer = this.selectCustomer.bind( this );
   }
 
   startNewCustomer() {

@@ -4,7 +4,7 @@ import './App.css';
 import Header from './Header/Header';
 import List from './List/List';
 import Workspace from './Workspace/Workspace';
-import { getCustomerList, postCustomer, getCustomer } from '../customers';
+import { getCustomerList, postCustomer, getCustomer, updateCustomer } from '../customers';
 
 class App extends Component {
   constructor() {
@@ -19,6 +19,18 @@ class App extends Component {
     this.startNewCustomer = this.startNewCustomer.bind( this );
     this.createCustomer = this.createCustomer.bind( this );
     this.selectCustomer = this.selectCustomer.bind( this );
+    this.saveEdit = this.saveEdit.bind( this );
+  }
+
+  saveEdit(id, obj) {
+    updateCustomer(id, obj).then(updatedCustomer => {
+      getCustomerList().then(list=> {
+        this.setState({
+          customerList: list,
+          currentCustomer: updatedCustomer
+        })
+      })
+    })
   }
 
   startNewCustomer() {
@@ -78,6 +90,7 @@ class App extends Component {
                     createCustomer={this.createCustomer}
                     currentCustomer={this.state.currentCustomer}
                     creating={this.state.creating}
+                    saveEdit={this.saveEdit}
                   />
         </div>
       </div>

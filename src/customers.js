@@ -19,5 +19,10 @@ export const postCustomer = function(customer) {
     })
 }
 
+export const updateCustomer = function(id, obj) {
+    return axios.patch(apiURL + id, obj).then(response => {
+        return response.data;
+    })
+}
 
 

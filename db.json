@@ -11,24 +11,16 @@
     },
     {
       "id": 2,
-      "first": "Sarah",
+      "first": "Landon",
       "last": "Croft",
       "status": "No repairs in progress",
       "email": "sarahcroft@gmail.com",
       "phone": "(325)-345-2352",
       "log": "This\nis\nanother\ntest\nlog"
     },
-    {
-    
-    },
-    {
-    
-    },
-    {
-      
-    },
-    {
-     
-    }
+    {},
+    {},
+    {},
+    {}
   ]
 }

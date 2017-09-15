@@ -4,7 +4,7 @@ import './Workspace.css';
 import Customer from './Customer/Customer';
 import CreateCustomer from './CreateCustomer/CreateCustomer';
 
-function Workspace( { initialLoad, creating, currentCustomer, createCustomer, saveEdit } ) {
+function Workspace( { initialLoad, creating, currentCustomer, createCustomer, saveEdit, removeCustomer } ) {
 
   return (
     <div id="Workspace__container">
@@ -29,6 +29,7 @@ function Workspace( { initialLoad, creating, currentCustomer, createCustomer, sa
                         status={currentCustomer.status}
                         log={currentCustomer.log}
                         saveEdit={saveEdit}
+                        removeCustomer={ removeCustomer }
                         />
             : null
       }

@@ -25,4 +25,10 @@ export const updateCustomer = function(id, obj) {
     })
 }
 
+export const deleteCustomer = function(id) {
+    return axios.delete(apiURL + id).then(response => {
+        return response.data;
+    })
+}
+
 
